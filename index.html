@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Miss!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="fireworks"></canvas>
+
+  <div class="container">
+    <h1 class="wish">🎉 Happy Birthday Miss 🎂</h1>
+    <p class="sub">To our wonderful teacher who makes us shine ✨</p>
+
+    <div class="btns">
+      <button onclick="startMagic()">Click for Magic 🎁</button>
+      <button class="secondary" onclick="openLetter()">Open Birthday Letter 💌</button>
+    </div>
+  </div>
+
+  <!-- Letter Modal -->
+  <div id="letter-backdrop" class="backdrop" onclick="closeLetter(event)">
+    <div class="letter" role="dialog" aria-modal="true" aria-label="Birthday Letter">
+      <button class="close" aria-label="Close" onclick="forceCloseLetter()">×</button>
+      <div class="envelope-top"></div>
+      <div class="paper">
+        <h2>Dear Miss,</h2>
+        <p id="typed">
+          <!-- typed text will appear here -->
+        </p>
+        <p class="signoff">With love and gratitude,<br> Your student 💖Nimra</p>
+      </div>
+      <div class="envelope-bottom"></div>
+
+      <div class="letter-actions">
+        <button onclick="downloadCard()">Download as Image</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
